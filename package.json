@@ -5,9 +5,9 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:travis": "ng build ngx-videogular",
+    "build:travis": "ng build ngx-round-progress",
     "test": "ng test",
-    "test:travis": "ng test ngx-videogular --watch=false --browsers=ChromeHeadless",
+    "test:travis": "ng test ngx-round-progress --watch=false --browsers=ChromeHeadless",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
