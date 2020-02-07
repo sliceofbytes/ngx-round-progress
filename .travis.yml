@@ -1,0 +1,25 @@
+sudo: required
+addons:
+  chrome: stable
+language: node_js
+node_js:
+- node
+- lts/*
+all_branches: true,
+before_script:
+- npm install -g @angular/cli
+script:
+- npm run test:travis
+- npm run build:travis
+before-deploy:
+- cd dist/ngx-round-progress
+deploy:
+  edge: true
+  provider: npm
+  email: sliceofbytes@gmail.com
+  api_key:
+    secure: PJBaNUIzUZ3ICmDznn+KlJZKeCglJjJ+OP+q72VpLIMRdILWQlAau/WWPnyGebVZHPOZmDaQUdHK307J0tXSgFE0ku/2fBgjYRgzc0vxqXadKzAsgsQE5E3bRgzHXay9KOZt38ZklwPTkeHvYHvGq3aULGGh0cEYj/od7AwcotS0Yt5X3p2oVqYPdZw/pg0MbC5NMY98k6oJ+l6Qii3OmPTrIf9jW0o0biHxo+yVNmSNqm+3cNrqlsTuc41NrtTaXYtNaZnz2gZm3DBKNnwRypaSQanJo0J2CVVekzdrQTdjy5sgEOSYhgj+iUkqpBZPBqdFvGtJX7pqvHv2dmDQfQtle7iNV7A91PufhDJ5wjmoFDjMsFebcgVmJjX70x5fZ1Gyy3/6SKRlT4FofH5H6nHOORv8kdyRaap+06/Wtsq4JmdB6b2HQ1JvWgAYhDEqsSXW088/0OFXAFW3WhaMOrnRO9pEdUm80AlohEv8+Zef7SjDPy0tCsC/jpf0saBVskfOSq+FvOahXPLT3USzGkMql5CEsfJiaAsKLD2AnH/D230K0ZRpuKjF82k70v1fP4pzKiLEkxr6oqktoGOx7P9oUVCBuwa242mtg6a81KdVNrtrwtFVLUijjjtxMJ2tnPOC2FpJ3317eqw00cLNMRCrtCSKJOg5q6YXpptcMQA=
+  on:
+    tags: true
+    repo: sliceofbytes/ngx-round-progress
+  skip_cleanup: true
