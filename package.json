@@ -1,6 +1,6 @@
 {
   "name": "ngx-round-progress",
-  "version": "16.0.5",
+  "version": "16.1.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
