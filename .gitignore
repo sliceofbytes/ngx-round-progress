@@ -10,6 +10,8 @@
 # dependencies
 /node_modules
 
+node_modules
+
 # profiling files
 chrome-profiler-events*.json
 speed-measure-plugin*.json
@@ -22,6 +24,17 @@ speed-measure-plugin*.json
 *.launch
 .settings/
 *.sublime-workspace
+
+.angular
+.history
+
+.angular/cache
+.angular/cache/
+
+/.angular
+/.history
+
+.angular/cache/16.0.5/angular-webpack/483fbda3588155363add21aa5afee7f6f0ece5c5/0.pack
 
 # IDE - VSCode
 .vscode/*
